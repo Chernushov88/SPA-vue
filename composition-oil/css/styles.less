@@ -1,0 +1,838 @@
+//@baseOpenSans: 'Open Sans', sans-serif;
+@family_OpenSans: 'Open Sans', sans-serif;
+@family_conquerorsans: 'ConquerorSans';
+@family_conquerorsansextrabold: 'ConquerorSansExtraBold';
+@font_size: 18px;
+@translate: translate(-50%, 0%);
+@transition: 1000ms ease all ;
+.transition{
+	 -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition ;
+}
+
+@import url(fonts.css);
+@import url(reset.css);
+/* ----------------------------Блок присоединения шрифтов--------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+/* ------------------------------ Конец блока присоединения шрифтов ------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*  TYPOGRAPHY
+/*-----------------------------------------------------------------------------------*/
+body{
+    // overflow-x: hidden;
+    font-family: @family_OpenSans;
+    font-size: @font_size;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    min-width: 960px;
+}
+
+*{
+	border: 0px solid #000;
+}
+.hide{
+	display: none !important;
+}
+.visible{
+	display: block !important;
+}
+.wrapper{
+	width: 100%;
+	// margin: 0 auto;
+}
+.wrapper-in{
+	width: 896px;
+	width: 976px;	
+	margin: 0 auto;
+	padding: 56px 0 100px 0;    
+    padding: 3% 0 6%;
+    padding: 32px 0 0 0;
+	outline: 0px solid #000;
+
+	
+}
+.cursor-metan{
+	cursor: url(../images/hover/metan.png) 25 40, auto !important;
+}
+.cursor-ciklogeksan{
+	cursor: url(../images/hover/ciklogeksan.png)  25 40, auto;    			
+}
+.cursor-azot{
+	cursor: url(../images/hover/azot.png)  25 40, auto;    			
+}
+.cursor-geksan{
+	cursor: url(../images/hover/geksan.png)  25 40, auto;    			
+}
+.cursor-serovodorod{
+	cursor: url(../images/hover/serovodorod.png)  25 40, auto;    			
+}
+.cursor-geksadekan{
+	cursor: url(../images/hover/geksadekan.png)  25 40, auto;    			
+}
+.cursor-benzol{
+	cursor: url(../images/hover/benzol.png)  25 40, auto;    			
+}
+.cursor-oktadekan{
+	cursor: url(../images/hover/oktadekan.png)  25 40, auto;    			
+}
+.cursor-oktan{
+	cursor: url(../images/hover/oktan.png)  25 40, auto;    			
+}
+.cursor-water{
+	cursor: url(../images/hover/water.png)  25 40, auto;    			
+}
+.cursor-metantiol{
+	cursor: url(../images/hover/metantiol.png)  25 40, auto;    			
+}
+.cursor-kremnia{
+	cursor: url(../images/hover/dioksin-kremnia.png) 25 40, auto;   			
+} 
+a:hover{
+	opacity: .7;
+}
+/* ------------------------------  Start header ------------------------------ */
+.header{
+	position: relative;
+	// padding-right: 15px;
+}
+a.refresh{
+	position: absolute;
+	right: 0;
+	z-index: 999;
+	display: inline-block;
+	width: 25px;
+	height: 32px;
+	margin-top: -5px;
+	float: right;
+	text-decoration: none;
+	.transition;    
+    background: url(../images/renew-hover-x2.png) no-repeat;
+    background-size: contain;
+}
+.refresh:hover {
+   /* -moz-transform: rotate(360deg); 
+    -ms-transform: rotate(360deg); 
+    -webkit-transform: rotate(360deg); 
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);*/
+   background: url(../images/renew-x2.png) no-repeat;
+	background-size: contain;
+}
+.header-in{
+
+}
+.h1{
+	font-family: @family_conquerorsansextrabold;
+	font-size: 56px;
+    font-size: 30px;
+	font-weight: 900;
+}
+.description{
+	width: 100%;
+    padding-top: 21px;
+    line-height: 1.2em;
+    font-family: @family_conquerorsans;
+	font-size: 24px;
+	word-wrap: break-word;		
+}
+
+/* ------------------------------  Stop header ------------------------------ */
+/* ------------------------------  Start contant ------------------------------ */
+.contant{
+	position: relative;
+	overflow: hidden;
+	padding-top: 6.5%;
+    padding-top: 66px;
+}
+
+	// .element-img-top:hover{
+	// 	display: block;
+	// 	&:before{					
+	// 		background: url(../images/img-element/top-hover-error.png);									
+	// 	}
+	// }
+
+.contant-left{
+	position: relative;
+	width: 40%;
+	margin-left: 3.7%;
+	margin-left: 32px;
+	float: left;
+	.oil-element{
+		width: 288px;
+		width: 41%;
+		float: left;
+		li{			
+			width: 100%;
+			padding-left: 10px;
+			&.oil-top span{
+				padding-top: 48px;
+			}
+			&.oil-center span{
+				padding-top: 137px;			
+			}
+			&.oil-bottom span{
+				padding-top: 100px;	
+			}
+			span{
+				display: block;
+			}
+		}
+	}
+	.img-element{
+		width: 58%;
+		background: url(../images/img-element/bochka-bg.png); 
+		background-size: contain !important;
+		background-repeat: no-repeat !important;
+		float: left;
+		li{
+			position: relative;
+			background-size: contain !important;			
+			&.hover-error:before{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-size: 100% !important;	
+			}
+			&.element-img-top{
+				&.hover-error:before{					
+					background: url(../images/img-element/top-hover-error.png);									
+				}
+				&.hover-element{
+					.img-normal{
+						display: none;
+					}
+					.img-error{
+						display: block;
+					}
+				}
+
+			}
+			&.element-img-center{
+				.element-img-center-border{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					&::before, &::after{
+						content: '';
+						display: block;
+						position: absolute;
+						left: -70%;
+						z-index: 1;
+						width: 71%;
+						height: 1px;
+						background: url(../images/oil-border.png);
+					}
+					&::before{
+						top: 0;
+					}
+					&::after{
+						bottom: 0;
+					}
+				}	
+				&.hover-error:before{					
+					background: url(../images/img-element/center-hover-error.png);									
+				}				
+				&.hover-element{
+					.img-normal{
+						display: none;
+					}
+					.img-error{
+						display: block;
+					}
+				}
+			}
+			&.element-img-bottom{
+				&.hover-error:before{					
+					background: url(../images/img-element/bottom-hover-error.png);									
+				}
+			    &.hover-element{
+			    	.img-normal{
+			    		display: none;
+			    	}
+			    	.img-error{
+			    		display: block;
+			    	}
+			    }
+			}	
+			.img-error{
+				display: none;
+			}
+			img{
+				display: block; 
+				max-width: 100%;
+				// opacity: 0;
+			}
+		}
+
+	}
+}
+.cursor-metan .img-element .label-catch,
+.cursor-ciklogeksan .img-element .label-catch,
+.cursor-ciklogeksan .img-element .label-catch,
+.cursor-azot .img-element .label-catch,
+.cursor-geksan .img-element .label-catch,
+.cursor-serovodorod .img-element .label-catch,
+.cursor-geksadekan .img-element .label-catch,
+.cursor-benzol .img-element .label-catch,
+.cursor-oktadekan .img-element .label-catch,
+.cursor-water .img-element .label-catch,
+.cursor-metantiol .img-element .label-catch,
+.cursor-kremnia .img-element .label-catch,
+{
+    z-index: 100;
+}
+.element-img-center{
+	.element-img-center-border{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		&::before, &::after{
+			content: '';
+			display: block;
+			position: absolute;
+			left: -70%;
+			z-index: 1;
+			width: 71%;
+			height: 1px;
+			background: url(../images/oil-border.png);
+		}
+		&::before{
+			top: 0;
+		}
+		&::after{
+			bottom: 0;
+		} 
+	}
+}
+.label-catch{
+	position: absolute;
+	z-index: 8;
+  display: block;
+	width: 56px !important;
+	height: 56px !important;
+	border-radius: 50%;
+	border: 0px solid #fff ;	
+	background-size: 99% !important;
+	background-repeat: no-repeat !important;
+	// display: block !important;	
+	opacity: 1 !important;   
+	&.label-top_1{
+    top: 93px;
+    left: 201px;
+	}
+	&.label-top_2{
+    top: 97px;
+    left: 258px;
+	}
+	&.label-top_3{
+    top: 125px;
+    left: 307px;
+	}
+	&.label-top_4{
+		top: 93px;
+		left: 353px;
+	}
+	&.label-center_1{
+    top: 195px;
+    left: 224px;
+	}
+	&.label-center_2{
+    top: 196px;
+    left: 325px;
+	}
+	&.label-center_3{
+    top: 232px;
+    left: 273px;
+	}
+	&.label-center_4{
+		top: 284px;
+		left: 226px;
+	}
+	&.label-center_5{
+    top: 279px;
+    left: 327px;
+	}
+	 &.label-bottom_1{
+    top: 370px;
+    left: 216px;
+	}
+	 &.label-bottom_2{
+	  top: 369px;
+	  left: 278px;
+	}
+	 &.label-bottom_3{
+    top: 368px;
+    left: 340px;
+	}
+}
+.img-element{ 
+	.label-catch{
+    width: 60px !important;
+    height: 92px !important;
+		border-radius: 0 !important;
+		border: 0px solid #fff !important;
+		&.label-top_1{
+	    top: 20%;
+	    left: 2%;
+	    width: 55px !important;
+		}
+		&.label-top_2{
+			top: 23%;
+			left: 26%;
+			width: 55px !important;
+		}
+		&.label-top_3{
+    	top: 23%;
+	    left: 50%;
+	    width: 55px !important;
+		}
+		&.label-top_4{
+			top: 23%;
+			left: 73.5%;
+			width: 55px !important;
+		}
+		&.label-center_1{
+			top: 1.5%;
+			left: 2.3%;
+			width: 73px !important;
+		}
+		&.label-center_2{
+	    top: 1.5%;
+	    left: 65%;
+	    width: 73px !important;	
+		}
+		&.label-center_3{
+			top: 1.5%;
+			left: 36%;
+			width: 73px !important;
+			height: 180px !important;
+		}
+		&.label-center_4{
+			top: 50%;
+			left: 2.3%;
+			width: 73px !important;	
+		}
+		&.label-center_5{
+			top: 50%;
+			left: 65%;
+			width: 73px !important;	
+		}
+		&.label-bottom_1{
+			width: 72px !important;
+			height:70px !important; 
+			top: 0%;
+			left: 3%;
+		}
+		&.label-bottom_2{
+			width: 72px !important;
+			height: 70px !important;
+			top: 0%;
+			left: 34%;
+		}
+		&.label-bottom_3{
+			width: 72px !important;
+			height: 70px !important;
+			top: 0%;
+    	left: 66%;
+		}
+	}
+}
+	
+
+.element-metan{
+	background: url(../images/aggregate-state/metan.png);    			
+}
+.element-ciklogeksan{
+	background: url(../images/aggregate-state/ciklogeksan.png);    			
+}
+.element-azot{
+	background: url(../images/aggregate-state/azot.png);    			
+}
+.element-geksan{
+	background: url(../images/aggregate-state/geksan.png);    			
+}
+.element-serovodorod{
+	background: url(../images/aggregate-state/serovodorod.png);    			
+}
+.element-geksadekan{
+	background: url(../images/aggregate-state/geksadekan.png);    			
+}
+.element-benzol{
+	background: url(../images/aggregate-state/benzol.png);    			
+}
+.element-oktadekan{
+	background: url(../images/aggregate-state/oktadekan.png);    			
+}
+.element-oktan{
+	background: url(../images/aggregate-state/oktan.png);    			
+}
+.element-water{
+	background: url(../images/aggregate-state/water.png);    			
+}
+.element-metantiol{
+	background: url(../images/aggregate-state/metantiol.png);    			
+}
+.element-kremnia{
+	background: url(../images/aggregate-state/dioksin-kremnia.png);    			
+}
+.catch-for-labels{
+	position: absolute;
+	top: 0;
+	right: 0;
+  width: 58%;
+  img{
+  	width: 100%;
+  	opacity: 0;
+  }
+	li{
+			position: relative;
+			background-size: contain !important;			
+			&.element-catch-top{			
+
+			}
+			&.element-catch-center{				
+			}
+			&.element-catch-bottom{
+				
+			}	
+	} 
+	.label-catch{
+		position: absolute;
+		z-index: 3;
+	  display: block;
+		width: 56px !important;
+		height: 56px !important;
+		border-radius: 50%;
+		border: 0px solid #e208e2 ;	
+		background-size: 99% !important;
+		background-repeat: no-repeat !important;
+		display: block !important;	
+		opacity: 1 !important;   
+		&.label-top_1{
+			top: 24%;
+			left: 5%;
+		}
+		&.label-top_2{
+			top: 28%;
+			left: 29.5%;
+		}
+		&.label-top_3{
+		    top: 52%;
+			left: 50%;
+		}
+		&.label-top_4{
+		    top: 24%;
+		    left: 70.5%;
+		}
+		&.label-center_5{
+		    top: 7%;
+				left: 15%;
+		}
+		&.label-center_6{
+			top: 7%;
+			left: 58%;	
+		}
+		&.label-center_7{
+			top: 27%;
+			left: 36%;
+		}
+		&.label-center_8{
+			top: 55%;
+			left: 15%;	
+		}
+		&.label-center_9{
+			top: 52%;
+			left: 60%;	
+		}
+		&.label-bottom_10{
+			top: 4%;
+			left: 12%;
+		}
+		&.label-bottom_11{
+		    top: 2%;
+		    left: 38%;
+		}
+		&.label-bottom_12{
+			top: 1%;
+			left: 64%;
+		}
+	}
+}
+
+
+
+
+.label-catch.erorr{
+	border: 2px solid #c71e21 !important;
+}
+.element-metan.erorr{
+	background: url(../images/aggregate-state/metan-error.png) !important;  
+}
+.element-ciklogeksan.erorr{
+	background: url(../images/aggregate-state/ciklogeksan-error.png) !important;  			
+}
+.element-azot.erorr{
+	background: url(../images/aggregate-state/azot-error.png) !important;    			
+}
+.element-geksan.erorr{
+	background: url(../images/aggregate-state/geksan-error.png) !important;    			
+}
+.element-serovodorod.erorr{
+	background: url(../images/aggregate-state/serovodorod-error.png) !important;    			
+}
+.element-geksadekan.erorr{
+	background: url(../images/aggregate-state/geksadekan-error.png) !important;    			
+}
+.element-benzol.erorr{
+	background: url(../images/aggregate-state/benzol-error.png) !important;    			
+}
+.element-oktadekan.erorr{
+	background: url(../images/aggregate-state/oktadekan-error.png) !important;    			
+}
+.element-oktan.erorr{
+	background: url(../images/aggregate-state/oktan-error.png) !important;    			
+}
+.element-water.erorr{
+	background: url(../images/aggregate-state/water-error.png) !important;    			
+}
+.element-metantiol.erorr{
+	background: url(../images/aggregate-state/metantiol-error.png) !important;    			
+}
+.element-kremnia.erorr{
+	background: url(../images/aggregate-state/dioksin-kremnia-error.png) !important;    			
+}
+
+.hide{
+	opacity: 0;
+}
+.contant-right .label .element-wrapp-hide + span.name{
+	display: none;
+}
+.element-wrapp-{
+	& > div{
+		cursor: url(../images/grabbing.png) 25 40, auto;		
+	}
+}
+.element-wrapp-top + span.name, .element-wrapp-center + span.name, .element-wrapp-bottom + span.name{
+	display: none !important;
+}
+
+.contant-right{
+	overflow: visible;
+	width: 53.7%;
+  width: 514px;
+  padding-top: 0px;
+	float: right;
+	
+	.label{
+		display: table;
+	    padding-top: 45px;
+	    padding-top: 23px;
+		float: left;
+		&  div{
+			display: table-cell;
+			width: 56px;
+			height: 56px; 
+			background-size: 99% !important;
+			background-repeat: no-repeat !important;
+			z-index: 9;		
+			& > div{
+				border: 2px solid #6dd6ce ;
+				border-radius: 50%;	
+			}
+		    
+			// &.grabbing{
+			// 	cursor: url(../images/grabbing.png) 25 40, auto;
+			// }
+			&.cursor-metan{
+				cursor: url(../images/grabbing.png) 25 40, auto;
+			}
+			
+			&.element-metan{
+				background: url(../images/aggregate-state/metan.png);    			
+			}
+			&.element-ciklogeksan{
+				background: url(../images/aggregate-state/ciklogeksan.png);    			
+			}
+			&.element-azot{
+				background: url(../images/aggregate-state/azot.png);    			
+			}
+			&.element-geksan{
+				background: url(../images/aggregate-state/geksan.png);    			
+			}
+			&.element-serovodorod{
+				background: url(../images/aggregate-state/serovodorod.png);    			
+			}
+			&.element-geksadekan{
+				background: url(../images/aggregate-state/geksadekan.png);    			
+			}
+			&.element-benzol{
+				background: url(../images/aggregate-state/benzol.png);    			
+			}
+			&.element-oktadekan{
+				background: url(../images/aggregate-state/oktadekan.png);    			
+			}
+			&.element-oktan{
+				background: url(../images/aggregate-state/oktan.png);    			
+			}
+			&.element-water{
+				background: url(../images/aggregate-state/water.png);    			
+			}
+			&.element-metantiol{
+				background: url(../images/aggregate-state/metantiol.png);    			
+			}
+			&.element-kremnia{
+				background: url(../images/aggregate-state/dioksin-kremnia.png);    			
+			}
+		}
+		&:nth-child(3n+1){
+			width: 267px;
+			width: 28%;
+			// background: #0c0;
+			.name{
+				width: 57%;
+			}
+		}
+		&:nth-child(3n+2){
+			width: 380px;
+		    width: 40%;
+			.name{
+				width: 70%;
+			}
+		}
+		&:nth-child(3n+3){
+			width: 310px;
+			width: 32%;
+			// background: #fcc0c0;
+			.name{
+				width: 62%;
+				line-height: 1.3;
+			}
+		}		
+		.name{
+			display: table-cell;
+			// height: 105px;
+			vertical-align: middle;
+		}
+	}
+}
+.label_img{
+			display: table-cell;
+			height: auto;
+		}
+.check{
+    width: 116px;
+    // margin-top: 47px;
+	float: right;
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+}
+/* ------------------------------  Stop contant ------------------------------ */
+/* ------------------------------  Stop footer ------------------------------ */
+.darken {
+	height: 100%;
+    width: 90%;
+	top: 0;
+	left: 0;
+    position: fixed;
+	z-index: 9999;
+}
+.darken-error {
+    // display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    z-index: 10;
+}
+.darken-success {
+    /*display: none;*/
+    width: 100%;
+    height: 100%;    
+    position: fixed;
+    top: 0px; 
+    left: 0px;  
+    overflow: hidden;
+    z-index: 9;
+}
+body.darken-success{
+	background: url(../images/sucses-bg.png) no-repeat;    
+}
+.darken-success-in{
+	// display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/sucses-bg.png); 
+	background-size: cover;
+	z-index: -1;
+
+}
+.popup-wrapper{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;	
+}
+.testcheck-result{
+	position: relative;
+	margin-top: 50px;
+}
+.popup-success {
+		position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    padding: 10px 20px;    
+    background: #fff;
+    z-index: 99;
+    float: left;
+	}
+.popup{
+    max-width: 450px;
+    width: 100%;    
+    min-height: 350px;
+    padding: 68px 40px 10px 50px;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #fff;
+    z-index: 100;
+    text-align: center;
+	 .h3{
+		margin: 20px 0 50px 0;
+		font-size: 30px;
+	}
+	a {
+    display: inline-block;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    background: #19a3ab;
+    border-radius: 5px;
+    text-decoration: none;
+    
+  }
+}
+.hidden{
+	display: none !important;
+}

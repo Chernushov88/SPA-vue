@@ -1,0 +1,454 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]--> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Состав нефти</title>
+		<meta name="description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=960">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+		<!-- <meta name="viewport" content="width=device-width" /> -->
+		<!-- <link rel="shortcut icon" href="favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="css/styles.css">  
+		<link rel="stylesheet" href="css/media.css">
+		<!-- script -->		
+		<!-- Vue 2.x -->
+		<script src="https://unpkg.com/vue"></script>		
+		<!-- Узнаем что за устройство -->		
+		<!--
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>	
+	
+	    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+	    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+	    <script type="text/javascript">
+			$(function() {				
+				$('.draggable').draggable();				
+			});
+	    </script> 
+    
+		<script src="js/device.js"></script>-->
+
+		<!-- -->
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all" />
+			<script type="text/javascript" src="https://rawgit.com/codefucker/finalReject/master/reject/reject.min.js" data-text="Ваш браузер застарел, обновите свой браузер"></script>
+			<script src="js/html5shiv/es5-shim.min.js"></script>
+			<script src="js/html5shiv/html5shiv.min.js"></script>
+			<script src="js/html5shiv/html5shiv-printshiv.min.js"></script>
+			<script src="js/respond/respond.min.js"></script>
+		<![endif]-->		
+	</head>
+	<body class="">
+	<!--
+		<script>
+		var mobile = device.desktop() ? false : true;
+		console.log(mobile)
+		</script>	
+		-->	
+		<main id="home-container" style="height: 100vh;"
+			:class="'cursor-'+element"			
+			@mouseup="gomove_Vue" 
+			>
+			<div class="wrapper-in"
+			>
+				<header class="header" >
+					<a href="javascript:void(0);" class="refresh" 					
+					@click="refreshAll"></a>
+					<div class="header-in">
+						<div class="h1">Состав нефти</div>
+						<div class="description">Разделите вещества, входящие в состав нефти, по агрегатному состоянию.</div>
+					</div>	
+				</header>
+				<section class="contant">
+					<div class="contant-left">
+						<ul class="oil-element">
+							<li class="oil-top"><span>Газы</span></li>
+							<li class="oil-center"><span>Жидкости</span></li>
+							<li class="oil-bottom"><span>Твердые</span></li>
+						</ul>
+						<ul class="img-element">	
+							<li class="element-img-top">
+								<img class="img-normal" src="images/img-element/top.png" alt="">
+								<barrel
+									:type="'top'"
+									:classname="'top_1'"
+									:innertype="'gaz'"
+									:barrelvess="1"									
+									@enterbarrel="startmove_Vue"
+									@exitbarrel="stopmove_Vue"
+									:startelement="element"		
+									:barrelcount = "barrel_arey['top']"			
+									>								
+								</barrel>
+								<barrel
+									:type="'top'"
+									:innertype="'gaz'"	
+									:barrelvess="1"	
+									:classname="'top_2'"								
+									@enterbarrel="startmove_Vue"
+									@exitbarrel="stopmove_Vue"
+									:startelement="element"		
+									:barrelcount = "barrel_arey['top']"			
+									>								
+								</barrel>
+								<barrel
+									:type="'top'"
+									:innertype="'gaz'"	
+									:barrelvess="1"	
+									:classname="'top_3'"								
+									@enterbarrel="startmove_Vue"
+									@exitbarrel="stopmove_Vue"
+									:startelement="element"		
+									:barrelcount = "barrel_arey['top']"			
+									>								
+								</barrel>
+								<barrel
+									:type="'top'"
+									:innertype="'gaz'"		
+									:barrelvess="1"	
+									:classname="'top_4'"							
+									@enterbarrel="startmove_Vue"
+									@exitbarrel="stopmove_Vue"
+									:startelement="element"		
+									:barrelcount = "barrel_arey['top']"			
+									>								
+								</barrel>
+							</li>		
+							<li class="element-img-center">
+								<div class="element-img-center-border"></div>
+								<img class="img-normal" src="images/img-element/center.png" alt="">
+								<barrel
+									:type="'center'"
+									:classname="'center_1'"
+									:barrelvess="1"	
+									:innertype="'voda'"									
+									@enterbarrel="startmove_Vue" 
+									@exitbarrel="stopmove_Vue"
+									:startelement="element"
+									:barrelcount = "barrel_arey['center']"	
+									>								
+								</barrel>
+								<barrel
+									:type="'center'"
+									:classname="'center_2'"
+									:barrelvess="1"	
+									:innertype="'voda'"									
+									@enterbarrel="startmove_Vue" 
+									@exitbarrel="stopmove_Vue"
+									:startelement="element"
+									:barrelcount = "barrel_arey['center']"	
+									>								
+								</barrel>
+								<barrel
+									:type="'center'"
+									:classname="'center_3'"
+									:barrelvess="1"	
+									:innertype="'voda'"									
+									@enterbarrel="startmove_Vue" 
+									@exitbarrel="stopmove_Vue"
+									:startelement="element"
+									:barrelcount = "barrel_arey['center']"	
+									>								
+								</barrel>
+								<barrel
+									:type="'center'"
+									:classname="'center_4'"
+									:barrelvess="1"	
+									:innertype="'voda'"									
+									@enterbarrel="startmove_Vue" 
+									@exitbarrel="stopmove_Vue"
+									:startelement="element"
+									:barrelcount = "barrel_arey['center']"	
+									>								
+								</barrel>
+								<barrel
+									:type="'center'"
+									:classname="'center_5'"
+									:barrelvess="1"	
+									:innertype="'voda'"									
+									@enterbarrel="startmove_Vue" 
+									@exitbarrel="stopmove_Vue"
+									:startelement="element"
+									:barrelcount = "barrel_arey['center']"	
+									>								
+								</barrel>
+							</li>
+							<li class="element-img-bottom">
+								<img class="img-normal" src="images/img-element/bottom.png" alt="">
+								<barrel
+								:type="'bottom'"
+								:classname="'bottom_1'"
+								:barrelvess="1"	
+								:innertype="'solid'"								
+								@enterbarrel="startmove_Vue"
+								@exitbarrel="stopmove_Vue"
+								:startelement="element"
+								:barrelcount = "barrel_arey['bottom']"	
+								>								
+							</barrel>
+							<barrel
+								:type="'bottom'"
+								:classname="'bottom_2'"
+								:barrelvess="1"	
+								:innertype="'solid'"								
+								@enterbarrel="startmove_Vue"
+								@exitbarrel="stopmove_Vue"
+								:startelement="element"
+								:barrelcount = "barrel_arey['bottom']"	
+								>								
+							</barrel>
+							<barrel
+								:type="'bottom'"
+								:classname="'bottom_3'"
+								:barrelvess="1"	
+								:innertype="'solid'"								
+								@enterbarrel="startmove_Vue"
+								@exitbarrel="stopmove_Vue"
+								:startelement="element"
+								:barrelcount = "barrel_arey['bottom']"	
+								>								
+							</barrel>
+							</li>				
+						</ul>
+						<div class="element-catch-center-border"></div>
+					</div>					
+					<div class="contant-right">
+						 
+						<div class="label label-element-metan">
+							<home 
+								:type="'metan'"
+								:imgBarel="'images/aggregate-state/metan.png'"	
+								:classerorr = "classerorr['metan']"
+								@stopmoveBarrel="cursor"
+								:classposition = "classposition['metan']"
+								:innertype="'gaz'"	
+								@elementstop = 'stopchecktype'	
+								@elementstart = 'startchecktype'
+								:move = "elementmove['metan']"
+								:homebarrelposition = "labelletoff['metan']"				
+								>
+							</home>
+							<span class="name">Метан</span>
+						</div>
+						<div class="label label-element-ciklogeksan">
+							<home 
+								:type="'ciklogeksan'"
+								:innertype="'voda'"
+								:src="'images/aggregate-state/ciklogeksan.png'"
+								:classerorr = "classerorr['ciklogeksan']"
+								:classposition = "classposition['ciklogeksan']"	
+								@elementstop = 'stopchecktype'
+								@elementstart = 'startchecktype'
+								:move = "elementmove['ciklogeksan']"
+								:homebarrelposition = "labelletoff['ciklogeksan']"
+								>
+							</home>
+							<span class="name">Циклогексан</span>
+						</div>
+						<div class="label label-element-azot">
+							<home 
+								:type="'azot'"
+								:innertype="'gaz'"
+								:src="'images/aggregate-state/azot.png'"
+								:classerorr = "classerorr['azot']"
+								:classposition = "classposition['azot']"	
+								@elementstop = 'stopchecktype'
+								@elementstart = 'startchecktype'
+								:move = "elementmove['azot']"
+								:homebarrelposition = "labelletoff['azot']"
+								>
+							</home>
+							<span class="name">Азот</span>
+						</div>
+						<div class="label label-element-geksan">
+							<home 
+								:type="'geksan'"
+								:innertype="'voda'"
+								:src="'images/aggregate-state/geksan.png'"
+								:classerorr = "classerorr['geksan']"
+								:classposition = "classposition['geksan']"	
+								@elementstop = 'stopchecktype'
+								@elementstart = 'startchecktype'
+								:move = "elementmove['geksan']"
+								:homebarrelposition = "labelletoff['geksan']"
+								>
+							</home>
+							<span class="name">Гексан</span>
+						</div>
+						<div class="label label-element-serovodorod">
+							<home 
+								:type="'serovodorod'"
+								:innertype="'gaz'"
+								:src="'images/aggregate-state/serovodorod.png'"
+								:classerorr = "classerorr['serovodorod']"
+								:classposition = "classposition['serovodorod']"	
+								@elementstop = 'stopchecktype'
+								@elementstart = 'startchecktype'
+								:move = "elementmove['serovodorod']"
+								:homebarrelposition = "labelletoff['serovodorod']"
+								>
+							</home>
+							<span class="name">Сероводород</span>
+						</div>
+						<div class="label label-element-geksadekan">
+							<home 
+								:type="'geksadekan'"
+								:innertype="'solid'"
+								:src="'images/aggregate-state/geksadekan.png'"
+								:classerorr = "classerorr['geksadekan']"
+								:classposition = "classposition['geksadekan']"
+								@elementstop = 'stopchecktype'
+								@elementstart = 'startchecktype'
+								:move = "elementmove['geksadekan']"
+								:homebarrelposition = "labelletoff['geksadekan']"	
+								>
+							</home>
+							<span class="name">Гексадекан</span>
+						</div>
+						<div class="label label-element-benzol">
+							<home 
+								:type="'benzol'"
+								:innertype="'voda'"
+								:src="'images/aggregate-state/benzol.png'"
+								:classerorr = "classerorr['benzol']"
+								:classposition = "classposition['benzol']"	
+								@elementstop = 'stopchecktype'
+								@elementstart = 'startchecktype'
+								:move = "elementmove['benzol']"
+								:homebarrelposition = "labelletoff['benzol']"
+								>
+							</home>
+							<span class="name">Бензол</span>
+						</div>
+						<div class="label label-element-oktadekan">
+							<home 
+								:type="'oktadekan'"
+								:innertype="'solid'"
+								:src="'images/aggregate-state/oktadekan.png'"
+								:classerorr = "classerorr['oktadekan']"
+								:classposition = "classposition['oktadekan']"
+								@elementstop = 'stopchecktype'
+								@elementstart = 'startchecktype'
+								:move = "elementmove['oktadekan']"
+								:homebarrelposition = "labelletoff['oktadekan']"	
+								>
+							</home>
+							<span class="name">Октадекан</span>
+						</div>
+						<div class="label label-element-oktan">
+							<home 
+								:type="'oktan'"
+								:innertype="'voda'"
+								:src="'images/aggregate-state/oktan.png'"
+								:classerorr = "classerorr['oktan']"
+								:classposition = "classposition['oktan']"	
+								@elementstop = 'stopchecktype'
+								@elementstart = 'startchecktype'
+								:move = "elementmove['oktan']"
+								:homebarrelposition = "labelletoff['oktan']"
+								>
+							</home>
+							<span class="name">Октан</span>
+						</div>
+						<div class="label label-element-water">
+							<home 
+								:type="'water'"
+								:innertype="'voda'"
+								:src="'images/aggregate-state/water.png'"
+								:classerorr = "classerorr['water']"
+								:classposition = "classposition['water']"	
+								@elementstop = 'stopchecktype'
+								@elementstart = 'startchecktype'
+								:move = "elementmove['water']"
+								:homebarrelposition = "labelletoff['water']"
+								>
+							</home>
+							<span class="name">Вода</span>
+						</div>
+						<div class="label label-element-metantiol">
+							<home 
+								:type="'metantiol'"
+								:innertype="'gaz'"
+								:src="'images/aggregate-state/metantiol.png'"
+								:classerorr = "classerorr['metantiol']"
+								:classposition = "classposition['metantiol']"
+								@elementstop = 'stopchecktype'
+								@elementstart = 'startchecktype'
+								:move = "elementmove['metantiol']"
+								:homebarrelposition = "labelletoff['metantiol']"	
+								>
+							</home>
+							<span class="name">Метантиол</span>
+						</div>
+						<div class="label label-element-kremnia">
+							<home 
+								:type="'kremnia'"
+								:innertype="'solid'"
+								:src="'images/aggregate-state/dioksin-kremnia.png'"
+								:classerorr = "classerorr['kremnia']"
+								:classposition = "classposition['kremnia']"	
+								@elementstop = 'stopchecktype'
+								@elementstart = 'startchecktype'
+								:move = "elementmove['kremnia']"
+								:homebarrelposition = "labelletoff['kremnia']"
+								>
+							</home>
+							<span class="name">Диоксид кремния</span>
+						</div> 
+						<div class="clear"></div>		
+						<div class="testcheck-result">
+							<div class="popup-success" :class="{'hidden': hide_success}">Правильно!</div>				
+							<a href="#"
+							@click = "testcheck"						
+							class="check">
+								<img src="images/check.png" alt=""></a> 
+						</div>
+							
+					</div>
+				</section>			
+		
+				
+			
+				<div class="darken-error" :class="{'hidden': hide_fail}">
+					<div class="popup-fail popup" id="popup">
+						<div class="h3">Увы, есть ошибки.</div>	
+						<!-- <a href="#looks-well"
+						@click="refreshAll()"><img src="images/start.png" alt=""></a> -->
+						<a href="javascript:void(0);" class="start-beginning" 					
+						@click="refreshAll">Начать с начала</a>
+					</div>	
+				</div>						
+				<div class="darken-success-in" :class="{'hidden': hide_success}">
+											
+				</div>	
+				<div class="popup-wrapper" :class="{'hidden': hide_success}">
+					
+				</div>
+
+			</div>
+		</main>
+		<!-- основной фаил пока что -->		
+		<script src="js/vue/component.js"></script>
+		<script src="js/vue/vue.js"></script>
+
+	<script>
+	window.onresize = function(){
+	  var width = document.documentElement.clientWidth; //Ширина экрана
+	  var height = document.documentElement.clientHeight; //Высота экрана
+
+	  console.log('ширина - <b>'+width+'</b>'+'<br> высота - <b>'+height+'</b>');
+	}
+</script>
+
+
+		
+	</body>
+</html>
+
+
+
