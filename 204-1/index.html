@@ -1,0 +1,438 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+	<head> 
+		<meta charset="utf-8" />
+		<title>Как лучше доставить нефть</title>
+		<meta name="description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=960px,maximum-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">  
+		<!-- script -->		
+		<!-- Vue 2.x -->
+		<script src="js/vue/vue.js"></script>			
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all" />
+			<script type="text/javascript" src="https://rawgit.com/codefucker/finalReject/master/reject/reject.min.js" data-text="Ваш браузер застарел, обновите свой браузер"></script>
+			<script src="js/html5shiv/es5-shim.min.js"></script>
+			<script src="js/html5shiv/html5shiv.min.js"></script>
+			<script src="js/html5shiv/html5shiv-printshiv.min.js"></script>
+			<script src="js/respond/respond.min.js"></script>
+		<![endif]-->		
+<style>
+@-webkit-keyframes stepanim{
+	10%{
+		box-shadow: 0px 0px 15px 0 rgba(36,221,208,1);
+		background-color: rgba(36,221,208,1);
+		border-color: rgba(36,221,208,1);
+	}
+}
+@keyframes stepanim{
+	10%{
+		box-shadow: 0px 0px 15px 0 rgba(36,221,208,1);
+		background-color: rgba(36,221,208,1);
+		border-color: rgba(36,221,208,1);
+	}
+}
+.step-animation{
+	animation: stepanim 1s linear .75s alternate;
+    -webkit-animation: stepanim .75s linear 1 alternate;
+}
+</style>
+	</head>
+	<body class="" >
+		<div id="home-container">
+			<main class="wrapper" style="display:none;">
+				<div class="backgroung-center" >
+					<div class="wrapper-in" >		
+						<div class="header">
+							<stepComponent></stepComponent>	
+							<div class="refresh-wrapper">
+								<!-- <a href="#" class="refresh" title="" @click="refreshAll()" aria-describedby="ui-id-10"></a> -->
+								<a href="#" class="refresh" title="" aria-describedby="ui-id-10"></a>
+								<div class="ui-widget-content"><div class="ui-tooltip-content">Начать сначала</div></div>
+							</div>	
+							<div class="description">Как лучше доставить нефть к этому заводу?</div>			
+						</div>			
+						<section class="content">					
+							<div id="city" class="content-elem"><img src="images/city-bg.png" alt=""></div>
+							<div class="element-block">
+								<elementBlock
+									elemenid="truboprovod"
+									elemenimg="truboprovod"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="neftvyshki"
+									elemenimg="neftvyshki"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="train"
+									elemenimg="train"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="tanker"
+									elemenimg="tanker"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="tank-1"
+									elemenimg="tank"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="tank-2"
+									elemenimg="tank"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="factory"
+									elemenimg="factory"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="station"
+									elemenimg="station"
+									>		
+								</elementBlock>
+							</div>			
+							<div class="button-wrapper">
+								<buttonComponent
+									:number="1"
+									:descbutton="'на самалётах'"
+								>
+								</buttonComponent>
+								<buttonComponent
+									:number="2"
+									:descbutton="'по проводам'"
+								>
+								</buttonComponent>
+								<buttonComponent
+									:number="3"
+									:descbutton="'по рельсам'"
+								>
+								</buttonComponent>
+								<buttonComponent
+									:number="4"
+									:descbutton="'на грузовиках'"
+								>
+								</buttonComponent>
+								<buttonComponent
+									:number="5"
+									:descbutton="'по трубам'"
+								>
+								</buttonComponent>
+								<buttonComponent
+									:number="6"
+									:descbutton="'по морю'"
+								>
+								</buttonComponent>
+							</div>
+						</section>
+					</div>	
+				</div>					
+			</main>
+
+			<main class="wrapper step1-2" style="display:none;">
+				<div class="backgroung-center" >
+					<div class="wrapper-in" >		
+						<div class="header">
+							<stepComponent></stepComponent>	
+							<div class="refresh-wrapper">
+								<div class="refresh-background">
+									<a href="#" class="refresh" title="" aria-describedby="ui-id-10"></a>
+								</div>
+								<div class="ui-widget-content"><div class="ui-tooltip-content">Начать сначала</div></div>
+							</div>	
+							<div class="description">Как называется судно <br>для перевозки нефти?</div>			
+						</div>			
+						<section class="content">					
+							<div id="city" class="content-elem"><img src="images/city-bg.png" alt=""></div>
+							<div class="element-block">
+								<elementBlock
+									elemenid="truboprovod"
+									elemenimg="truboprovod"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="neftvyshki"
+									elemenimg="neftvyshki"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="train"
+									elemenimg="train"
+									>		
+								</elementBlock>
+								<!-- <elementBlock
+									elemenid="tanker"
+									elemenimg="tanker"
+									>		
+								</elementBlock> -->
+								<div id="tanker" class="content-elem">
+									<img src="images/tanker-bg-2.png" alt="">
+									<div class="button">танкер</div>
+								</div>
+								<elementBlock
+									elemenid="tank-1"
+									elemenimg="tank"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="tank-2"
+									elemenimg="tank"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="factory"
+									elemenimg="factory"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="station"
+									elemenimg="station"
+									>		
+								</elementBlock>
+							</div>	
+							<div class="button-wrapper" >
+								<div class="button">баржа</div>
+								<div class="button">параход</div>
+								<div class="button">танкер</div>
+							</div>
+						</section>
+					</div>	
+				</div>					
+			</main>
+
+			<main class="wrapper step2-2" style="display:none;">
+				<div class="backgroung-center" >
+					<div class="wrapper-in" >		
+						<div class="header">
+							<stepComponent></stepComponent>	
+							<div class="refresh-wrapper">
+								<div class="refresh-background">
+									<a href="#" class="refresh" title="" aria-describedby="ui-id-10"></a>
+								</div>
+								<div class="ui-widget-content"><div class="ui-tooltip-content">Начать сначала</div></div>
+							</div>	
+							<div class="description">Как называются трубы <br>для нефти?</div>			
+						</div>			
+						<section class="content">					
+							<div id="city" class="content-elem"><img src="images/city-bg.png" alt=""></div>
+							<div class="element-block">
+								<!-- <elementBlock
+									elemenid="truboprovod"
+									elemenimg="truboprovod"
+									>		
+								</elementBlock> -->
+								<div id="truboprovod" class="content-elem">
+									<img src="images/truboprovod-bg-2.png" alt="">
+								</div>
+								<!-- <elementBlock
+									elemenid="neftvyshki"
+									elemenimg="neftvyshki"
+									>		
+								</elementBlock> -->
+								<div id="neftvyshki" class="content-elem">
+									<img src="images/neftvyshki-bg-2.png" alt="" style="display:none;">
+								</div>
+								<div class="neftvyshki-in" >
+									<img src="images/neftvyshk-animate2.png" class="neftvyshk-animate2" alt="">			
+									<img src="images/nasos@2x.png" class="neftvyshk-animate" alt="">					
+									<img src="images/neftvyshki-bg-x2.gif" class="neftvyshki-bg-x2" alt="">
+								</div>
+								<elementBlock
+									elemenid="train"
+									elemenimg="train"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="tanker"
+									elemenimg="tanker"
+									>		
+								</elementBlock>								
+								<elementBlock
+									elemenid="tank-1"
+									elemenimg="tank"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="tank-2"
+									elemenimg="tank"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="factory"
+									elemenimg="factory"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="station"
+									elemenimg="station"
+									>		
+								</elementBlock>
+							</div>			
+							<div class="button-wrapper" >
+								<div class="button">водопровод</div>
+								<div class="button">нефтепровод</div>
+								<div class="button">канализация</div>
+							</div>
+						</section>
+					</div>	
+				</div>					
+			</main>
+			
+			<main class="wrapper step3-2">
+				<div class="backgroung-center" >
+					<div class="wrapper-in" >		
+						<div class="header">
+							<stepComponent></stepComponent>	
+							<div class="refresh-wrapper">
+								<div class="refresh-background">
+									<a href="#" class="refresh" title="" aria-describedby="ui-id-10"></a>
+								</div>
+								<div class="ui-widget-content"><div class="ui-tooltip-content">Начать сначала</div></div>
+							</div>	
+							<div class="description">В чем перевозят нефть <br>по железной дороге?</div>			
+						</div>			
+						<section class="content">					
+							<div id="city" class="content-elem"><img src="images/city-bg.png" alt=""></div>
+							<div class="element-block eb-step3-2">
+								<elementBlock
+									elemenid="truboprovod"
+									elemenimg="truboprovod"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="neftvyshki"
+									elemenimg="neftvyshki"
+									>		
+								</elementBlock>
+
+								
+								<div class="tank-block content-elem">
+									<img src="images/tank-bg-2.png" alt="" class="tank">	
+									<img src="images/wheels-tank.gif" alt="" class="wheels-tank">						
+								</div>
+								<div class="tank-block tank-block-2 content-elem">
+									<img src="images/tank-bg-2.png" alt="" class="tank">	
+									<img src="images/wheels-tank.gif" alt="" class="wheels-tank">						
+								</div>
+								<div class="train-block content-elem">
+									<img src="images/train-bg-2.png" alt="" class="train">	
+									<img src="images/wheels.gif" alt="" class="wheels">							
+								</div>
+
+								<elementBlock
+									elemenid="factory"
+									elemenimg="factory"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="station"
+									elemenimg="station"
+									>		
+								</elementBlock>
+							</div>	
+							<div class="button-wrapper" >
+								<div class="button">
+									<img src="images/button/wagon.jpg" alt="">
+									<span>в вагонах</span>
+								</div>
+								<div class="button">
+									<img src="images/button/wagonetka.jpg" alt="">
+									<span>в вагонетках</span>									
+								</div>
+								<div class="button">
+									<img src="images/button/cisterna.jpg" alt="">
+									<span>в цистернах</span>
+								</div>
+							</div>
+						</section>
+					</div>	
+				</div>					
+			</main>
+
+			<main class="wrapper step-final" style="display:none;">
+				<div class="backgroung-center" >
+					<div class="wrapper-in" >		
+						<div class="header">
+							<stepComponent></stepComponent>	
+							<div class="refresh-wrapper">
+								<!-- <a href="#" class="refresh" title="" @click="refreshAll()" aria-describedby="ui-id-10"></a> -->
+								<a href="#" class="refresh" title="" aria-describedby="ui-id-10"></a>
+								<div class="ui-widget-content"><div class="ui-tooltip-content">Начать сначала</div></div>
+							</div>	
+							<div class="description correctly">Правильно</div>			
+						</div>			
+						<section class="content">					
+							<div id="city" class="content-elem"><img src="images/city-bg.png" alt=""></div>
+							<div class="element-block">
+								<elementBlock
+									elemenid="truboprovod"
+									elemenimg="truboprovod"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="neftvyshki"
+									elemenimg="neftvyshki"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="train"
+									elemenimg="train"
+									>		
+								</elementBlock>
+								<div id="tanker" class="content-elem">
+									<img src="images/tanker-bg-final.png" alt="">
+								</div>
+								<elementBlock
+									elemenid="tank-1"
+									elemenimg="tank"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="tank-2"
+									elemenimg="tank"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="factory"
+									elemenimg="factory"
+									>		
+								</elementBlock>
+								<elementBlock
+									elemenid="station"
+									elemenimg="station"
+									>		
+								</elementBlock>
+							</div>			
+
+						</section>
+					</div>	
+				</div>					
+			</main>
+
+
+		</div>
+			
+			<script src="js/vue/component.js"></script>
+			<script src="js/vue/scripts.js"></script>
+
+
+		
+	</body>
+</html>
+
+
+
+
+
+
+

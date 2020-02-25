@@ -1,0 +1,710 @@
+/* ----------------------------Блок присоединения шрифтов--------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+.transition {
+  -webkit-transition: 1000ms;
+  -moz-transition: 1000ms;
+  -o-transition: 1000ms;
+  transition: 1000ms;
+}
+/* ----------------------------Блок присоединения шрифтов--------------------------------*/
+/* ------------------------------ Конец блока присоединения шрифтов ------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*  TYPOGRAPHY
+/*-----------------------------------------------------------------------------------*/
+body {
+  overflow-x: hidden;
+  font-family: 'ConquerorSans';
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  min-width: 960px;
+  color: #000000;
+  background: #a2e36d;
+  background: -moz-linear-gradient(top, #a2e36d 0%, #dcf4b0 100%);
+  background: -webkit-linear-gradient(top, #a2e36d 0%,#dcf4b0 100%);
+  background: linear-gradient(to bottom, #a2e36d 0%,#dcf4b0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a2e36d', endColorstr='#dcf4b0',GradientType=0 );
+}
+
+* {
+  border: 0px solid #000 ;
+}
+.hide {
+  display: none !important;
+}
+.visible {
+  display: block !important;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: url(./../images/backgrounds/step0.jpg) center 108px no-repeat;
+  background: url(./../images/step0.jpg) center 108px no-repeat;
+}
+.wrapper::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 433px;
+  left: 0;
+  width: 100%;
+  height: 181px;
+  height: 200px;
+  background: url(./../images/brush/brush-step0.png) center 0px no-repeat;
+}
+.wrapper.step1-2::after{
+  top: 566px;
+  height: 360px;
+  background: url(./../images/brush/brush-step1.png) center 0px no-repeat;
+}
+.wrapper.step2-2::after{
+  top: 566px;
+  height: 360px;
+  background: url(./../images/brush/brush-step2.png) center 0px no-repeat;
+}
+.wrapper.step3-2::after{
+  top: 566px;
+  height: 360px;
+  background: url(./../images/brush/brush-step3.png) center 0px no-repeat;
+}
+.wrapper.step1-2 {
+  background: url(./../images/backgrounds/step1.jpg) center 0px no-repeat;
+}
+.wrapper.step1-2 .wrapper-in {
+  height: 650px;
+  margin-top: 0;
+  padding-left: 34px;
+}
+.wrapper.step1-2 .header {
+  width: 904px;
+  top: 23px;
+}
+.wrapper.step1-2 .content-elem {
+  display: none;
+}
+.wrapper.step1-2 .content-elem#tanker {
+  display: block;
+  left: 163px;
+  top: 252px;
+}
+.wrapper.step1-2 .content-elem .button {
+  opacity: 0;
+  width: 140px;
+  height: 49px;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
+  background: #fff;
+  font-size: 28px;
+  color: #000;
+}
+.wrapper.step1-2::before {
+  display: none;
+}
+.wrapper.step1-2 .content .button-wrapper {
+  top: 134px;
+  left: -3px;
+}
+.wrapper.step1-2 .content .button-wrapper .button {
+  width: 140px;
+  height: 50px;
+  margin-right: 29px;
+  line-height: 1.7;
+  font-size: 28px;
+  color: #00a095;
+}
+.wrapper.step2-2 {
+  background: url(./../images/backgrounds/step2.jpg) center 0px no-repeat;
+}
+.wrapper.step2-2 .wrapper-in {
+  height: 650px;
+  margin-top: 0;
+  padding-left: 34px;
+}
+.wrapper.step2-2 .header {
+  width: 904px;
+  top: 23px;
+}
+.wrapper.step2-2 .header .description {
+  position: absolute;
+  top: 313px;
+  margin-left: -1px;
+}
+.wrapper.step2-2 .content-elem {
+  display: none;
+}
+.wrapper.step2-2 .content-elem#truboprovod {
+  display: block;
+  left: 268px;
+  top: 157px;
+}
+.wrapper.step2-2 .content-elem#neftvyshki {
+  display: block;
+  right: -241px;
+  top: 241px;
+  left: auto;
+}
+.wrapper.step2-2 .content-elem .button {
+  opacity: 0;
+  width: 140px;
+  height: 49px;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
+  background: #fff;
+  font-size: 28px;
+  color: #000;
+}
+.wrapper.step2-2::before {
+  display: none;
+}
+.wrapper.step2-2 .content .button-wrapper {
+  top: 422px;
+}
+.wrapper.step2-2 .content .button-wrapper .button {
+  width: 200px;
+  height: 50px;
+  margin-right: 29px;
+  line-height: 1.7;
+  font-size: 28px;
+  color: #00a095;
+}
+.wrapper.step3-2 {
+  background: url(./../images/backgrounds/step3.jpg) center 0px no-repeat;
+}
+.wrapper.step3-2 .wrapper-in {
+  height: 650px;
+  margin-top: 0;
+  padding-left: 34px;
+}
+.wrapper.step3-2 .header {
+  width: 904px;
+  top: 19px;
+}
+.wrapper.step3-2 .content-elem {
+  display: none;
+}
+.wrapper.step3-2 .content-elem#train {
+  display: block;
+  left: -59px;
+  top: 432px;
+}
+.wrapper.step3-2 .content-elem .button {
+  opacity: 0;
+  width: 140px;
+  height: 49px;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
+  background: #fff;
+  font-size: 28px;
+  color: #000;
+}
+.wrapper.step3-2::before {
+  display: none;
+}
+.wrapper.step3-2 .content .button-wrapper {
+  top: 126px;
+  left: -3px;
+}
+.wrapper.step3-2 .content .button-wrapper .button {
+  width: 200px;
+  height: 150px;
+  margin-right: 32px;
+  line-height: .8;
+  font-size: 28px;
+  padding-top: 8px;
+  color: #00a095;
+}
+.wrapper.step3-2 .content .button-wrapper .tank{
+  width: 177px;
+}
+.wrapper.step-final .header {
+  left: -10px;
+}
+.wrapper.step-final .content .content-elem#tanker {
+  left: 589px;
+  top: 68px;
+  z-index: 1;
+}
+.wrapper.step-final .content .content-elem#train {
+  left: 739px;
+  top: 230px;
+  z-index: 1;
+}
+.wrapper.step-final .content .content-elem#tank-1 {
+  left: 628px;
+  top: 223px;
+  z-index: 1;
+}
+.wrapper.step-final .content .content-elem#tank-2 {
+  left: 517px;
+  top: 223px;
+  z-index: 1;
+}
+.wrapper::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 109px;
+  background: #fff;
+}
+.wrapper-in {
+  position: relative;
+  width: 960px;
+  height: 600px;
+  margin: 126px auto 0;
+  padding: 19px 35px 10px 35px;
+  outline: 0px solid #000;
+}
+/* ------------------------------  Start header ------------------------------ */
+.header {
+  position: absolute;
+  top: -107px;
+  width: 890px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+.header ul.step {
+  overflow: hidden;
+}
+.header ul.step li {
+  overflow: hidden;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  margin-right: 18px;
+  line-height: 2.1em;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+  border-radius: 50%;
+  color: #d8dad4;
+  background: #fff;
+  float: left;
+}
+.header ul.step li span {
+  display: block;
+  width: 38px;
+  height: 38px;
+  margin: 0px 0 0 -1px;
+}
+.header ul.step li span.current {
+  color: #2d2d2d ;
+}
+.header ul.step li span.active {
+  background: url(../images/check.svg) no-repeat center;
+  background-size: 50%;
+  /*margin: -2px 0 0 -2px;*/
+  color: rgba(0,0,0,0);
+}
+.header ul.step li span.active-curent {
+  -webkit-animation: stepanim 1s linear 0 alternate;
+  -o-animation: stepanim 1s linear 0 alternate;
+  animation: stepanim 1s linear 0s alternate;
+}
+.header a.refresh {
+  display: inline-block;
+  width: 22px;
+  height: 27px;
+  margin-top: -31px;
+  float: right;
+  text-decoration: none;
+  background: url(./../images/reload.svg) no-repeat;
+  background-size: contain;
+}
+.header a.refresh:hover {
+  background: url(./../images/reload-hover.svg) no-repeat;
+  background-size: contain;
+}
+.header .refresh-background {
+  display: block;
+  float: right;
+  width: 46px;
+  height: 46px;
+  margin: -40px 0 0 0;
+  text-align: center;
+  line-height: 3.4;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+.header .refresh-background a.refresh {
+  display: inline-block;
+  width: 22px;
+  height: 27px;
+  margin-top: 0;
+  float: none;
+}
+.header .description {
+  margin: 13px 0 43px -4px;
+  font-family: 'ConquerorSans', sans-serif;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 400;
+}
+.header .description.correctly {
+  color: #f0f0f0;
+}
+.header .description.correctly-aqua {
+  color: #24ddd0;
+}
+/* ------------------------------  Start content ------------------------------ */
+.content {
+  position: relative;
+  min-height: 400px;
+}
+.content.transparent-background::after {
+  content: '';
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-transition: 1000ms;
+  -moz-transition: 1000ms;
+  -o-transition: 1000ms;
+  transition: 1000ms;
+}
+.content .element-block.eb-step3-2 {
+  margin-left: -600px;
+}
+.content .element-block.eb-step3-2 .content-elem{
+  position: absolute;
+}
+.content .element-block.eb-step3-2 .content-elem.tank-block{
+  top: 415px;
+  left: -312px;
+}
+.content .element-block.eb-step3-2 .content-elem.tank-block-2{
+  left: -533px;
+}
+.content .element-block.eb-step3-2 .content-elem.train-block{
+  top: 431px;
+  left: -91px;
+}
+.content .content-elem {
+  position: absolute;
+  display: inline-block;
+}
+.content .content-elem#city {
+  left: -63px;
+  top: -1px;
+}
+.content .content-elem#truboprovod {
+  left: 116px;
+  top: 91px;
+}
+.content .content-elem#neftvyshki {
+  left: 208px;
+  top: 134px;
+}
+.content .content-elem#train {
+  left: 550px;
+  top: 231px;
+  z-index: 5;
+}
+.content .content-elem.train-block {
+  position: relative;
+  display: block;
+  top: 431px;
+  float: left;
+}
+.content .content-elem.train-block .wheels {
+  position: absolute;
+  left: -19px;
+  top: -16px;
+}
+.content .content-elem.tank-block {
+  position: relative;
+  display: block;
+  top: 415px;
+  float: left;
+}
+.content .content-elem.tank-block .wheels-tank {
+  position: absolute;
+  left: -14px;
+  top: -14px;
+}
+.content .content-elem#tank-1 {
+  left: 439px;
+  top: 223px;
+}
+.content .content-elem#tank-2 {
+  left: 328px;
+  top: 223px;
+}
+.content .content-elem#tanker {
+  left: 700px;
+  top: 90px;
+  z-index: 5;
+}
+.content .content-elem#factory {
+  right: -73px;
+  top: -37px;
+}
+.content .content-elem#station {
+  right: 32px;
+  top: 171px;
+}
+.content .neftvyshki-in {
+  position: relative;
+  top: 181px;
+  left: 604px;
+}
+.content .neftvyshki-in .neftvyshk-animate2 {
+  position: absolute;
+  width: 698px;
+  top: 60px;
+  left: -161px;
+}
+.content .neftvyshki-in .neftvyshk-animate {
+  position: absolute;
+  width: 285px;
+  top: 120px;
+  left: 97px;
+}
+.content .neftvyshki-in .neftvyshki-bg-x2 {
+  position: absolute;
+  z-index: 1;
+  top: -18px;
+  left: 9px;
+}
+.content .button-wrapper {
+  position: absolute;
+  top: 307px;
+  left: 0;
+  z-index: 11;
+  font-family: 'ConquerorSans';
+}
+.content .button-wrapper .button {
+  position: relative;
+  width: 140px;
+  height: 116px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 3px;
+  background: #fff;
+  border: 1px solid #c1e8e5;
+  border-bottom: 0px solid #00a095;
+  float: left;
+  color: #00a095;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px rgba(196, 233, 230, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(196, 233, 230, 0.5);
+  box-shadow: 0 0 10px rgba(196, 233, 230, 0.5);
+  box-sizing: border-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+.content .button-wrapper .button:last-child {
+  margin: 0;
+}
+.content .button-wrapper .button::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #00a095;
+  border-radius: 0 0 3px 3px;
+}
+.content .button-wrapper .button:hover::after {
+  background: #ffe66c;
+}
+.content .button-wrapper .button.error::after {
+  background: #ff6b6b;
+}
+.content .button-wrapper .button.success::after {
+  background: #24ddd0;
+}
+.content .button-wrapper .button img {
+  max-width: 100%;
+  border-radius: 3px;
+}
+.content .button-wrapper .button p{
+  /*margin-left: -9px;*/
+}
+.content .button-wrapper .button.button1-1 {
+  position: absolute;
+}
+.content .button-wrapper .button.button1-2 {
+  position: absolute;
+  left: 170px;
+}
+.content .button-wrapper .button.button1-3 {
+  position: absolute;
+  left: 340px;
+}
+.content .button-wrapper .button.button2-1 {
+  position: absolute;
+}
+.content .button-wrapper .button.button2-2 {
+  position: absolute;
+  left: 220px;
+}
+.content .button-wrapper .button.button2-3 {
+  position: absolute;
+  left: 440px;
+}
+.content .button-wrapper .button.button3-1 {
+  position: absolute;
+  width: 230px;
+}
+.content .button-wrapper .button.button3-2 {
+  position: absolute;
+  left: 232px;
+  width: 230px;
+}
+.content .button-wrapper .button.button3-3 {
+  position: absolute;
+  left: 461px;
+  width: 230px;
+}
+.wrapper.step3-2 .button-wrapper .button img{
+  width: auto;
+  max-width: 92%;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+.content .button-wrapper .tank {
+  position: absolute;
+  left: 503px;
+  top: 15px;
+  cursor: pointer;
+}
+.refresh-wrapper {
+  position: relative;
+}
+.ui-widget-content {
+  display: none;
+  position: absolute;
+  right: -50px;
+  z-index: 9;
+  margin-top: 10px;
+  border: 0;
+  width: 124px;
+  padding: 7px 0px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  background: #ffe66c;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 0px #aaaaaa;
+  box-shadow: 0px 0px 0 #aaaaaa;
+  color: #777;
+}
+.ui-widget-content::before {
+  content: '';
+  border: 12px solid transparent;
+  border-bottom: 13px solid #ffe66c;
+  display: block;
+  width: 0;
+  height: 0;
+  margin: -25px 40% 0 0;
+  float: right;
+}
+.upper {
+	z-index: 50;
+}
+/* ------------------------------  Stop content ------------------------------ */@media only screen and (max-width: 960px) {
+
+}
+@media only screen and (min-width: 960px) {
+  .backgroung-center {
+    position: relative;
+    z-index: 9;
+    width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .backgroung-center::before,
+  .backgroung-center::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100px;
+    height: 600px;
+  }
+  .backgroung-center::before {
+    left: 0;
+  }
+  .backgroung-center::after {
+    right: 0;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .backgroung-center::after {
+    right: -0.9%;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .backgroung-center::after {
+    right: -1.8%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .backgroung-center::after {
+    right: -2.7%;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .backgroung-center::after {
+    right: -3.7%;
+  }
+}
+@media only screen and (max-width: 1060px) {
+  .backgroung-center::after {
+    right: -4.7%;
+  }
+}
+@media only screen and (max-width: 1040px) {
+  .backgroung-center::after {
+    right: -5.8%;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .backgroung-center::after {
+    right: -6.8%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .backgroung-center::after {
+    right: -7.8%;
+  }
+}
+@media only screen and (min-width: 1160px) {
+  .backgroung-center {
+    width: 1160px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .wrapper {
+    padding-bottom: 157px; 
+  }
+  .wrapper::before {
+    height: 110px;
+  }
+  .wrapper.step1-2::before {
+    height: 37px;
+  }
+}
+@media only screen and (min-width: 1600px){
+  .wrapper {
+      padding-bottom: 278px;
+  }
+}
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

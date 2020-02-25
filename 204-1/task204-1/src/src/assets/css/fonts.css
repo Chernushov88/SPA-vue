@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'ConquerorSans';
+    src: url('../fonts/ConquerorSans/ConquerorSans.eot');
+    src: url('../fonts/ConquerorSans/ConquerorSans.eot') format('embedded-opentype'),
+         url('../fonts/ConquerorSans/ConquerorSans.woff2') format('woff2'),
+         url('../fonts/ConquerorSans/ConquerorSans.woff') format('woff'),
+         url('../fonts/ConquerorSans/ConquerorSans.ttf') format('truetype'),
+         url('../fonts/ConquerorSans/ConquerorSans.svg#ConquerorSans') format('svg');
+}
+@font-face {
+    font-family:'ConquerorSans';
+    src: url('../fonts/ConquerorSans/ConquerorSans.otf');
+}
+@font-face {
+    font-family: 'ConquerorSansBold';
+    src: url('../fonts/ConquerorSansBold/ConquerorSansBold.eot');
+    src: url('../fonts/ConquerorSansBold/ConquerorSansBold.eot') format('embedded-opentype'),
+         url('../fonts/ConquerorSansBold/ConquerorSansBold.woff2') format('woff2'),
+         url('../fonts/ConquerorSansBold/ConquerorSansBold.woff') format('woff'),
+         url('../fonts/ConquerorSansBold/ConquerorSansBold.ttf') format('truetype'),
+         url('../fonts/ConquerorSansBold/ConquerorSansBold.svg#ConquerorSansBold') format('svg');
+}
+@font-face {
+    font-family:'ConquerorSansBold';
+    src: url('../fonts/ConquerorSansBold/ConquerorSansBold.otf');
+}
+@font-face {
+    font-family: 'ConquerorSansExtraBold';
+    src: url('../fonts/ConquerorSansExtraBold/ConquerorSansExtraBold.eot');
+    src: url('../fonts/ConquerorSansExtraBold/ConquerorSansExtraBold.eot') format('embedded-opentype'),
+         url('../fonts/ConquerorSansExtraBold/ConquerorSansExtraBold.woff2') format('woff2'),
+         url('../fonts/ConquerorSansExtraBold/ConquerorSansExtraBold.woff') format('woff'),
+         url('../fonts/ConquerorSansExtraBold/ConquerorSansExtraBold.ttf') format('truetype'),
+         url('../fonts/ConquerorSansExtraBold/ConquerorSansExtraBold.svg#ConquerorSansExtraBold') format('svg');
+}
+@font-face {
+    font-family:'ConquerorSansExtraBold';
+    src: url('../fonts/ConquerorSansExtraBold/ConquerorSansExtraBold.otf');
+}
