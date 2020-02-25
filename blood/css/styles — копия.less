@@ -1,0 +1,320 @@
+@family_OpenSans: 'Open Sans', sans-serif;
+@family_conquerorsans: 'ConquerorSans';
+@family_conquerorsansextrabold: 'ConquerorSansExtraBold';
+@font_size: 32px;
+@translate: translate(-50%, 0%);
+@transition: 1000ms ease all ;
+.transition{
+	 -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition ;
+}
+
+@import url(fonts.css);
+@import url(reset.css);
+/* ----------------------------Блок присоединения шрифтов--------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+/* ------------------------------ Конец блока присоединения шрифтов ------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*  TYPOGRAPHY
+/*-----------------------------------------------------------------------------------*/
+body{
+    // overflow-x: hidden;
+    font-family: @family_OpenSans;
+    font-size: @font_size;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    min-width: 960px;
+}
+*{
+	border: 0px solid #000 ;
+}
+.hide{
+	display: none !important;
+}
+.visible{
+	display: block !important;
+}
+.wrapper{
+	width: 100%;
+	// margin: 0 auto;
+}
+.wrapper-in{
+	width: 1824px;
+	margin: 0 auto;
+	// padding: 56px 0 100px 0;
+    padding: 0% 0 3%;
+	outline: 0px solid #000;
+}
+a:hover{
+	opacity: .7;
+}
+/* ------------------------------  Start header ------------------------------ */
+.header{
+	padding-right: 15px;
+}
+a.refresh{
+	display: inline-block;
+    width: 46px;
+    height: 56px;
+    margin-top: -60px;
+	float: right; 
+	text-decoration: none;
+	.transition;    
+    background: url(../images/renew-hover-x2.png) no-repeat;
+    background-size: contain;
+}
+.refresh:hover {
+   background: url(../images/renew-x2.png) no-repeat;
+	background-size: contain;
+}
+.h1{
+    margin-top: 28px;
+    margin-top: 2%;
+	font-family: @family_conquerorsans;	
+	font-size: 56px;
+}
+/* ------------------------------  Start contant ------------------------------ */
+.contant{
+	position: relative;
+	overflow: hidden;
+	height: 1200px;
+    // height: 135vh;
+	padding-top: 2.5%;
+	// background: url(../images/content-bg-0.png) no-repeat;
+	// background-size: contain;
+	ul.nav{
+		overflow: hidden;
+		li{
+			position: relative;
+		    width: 76px;
+		    height: 76px;
+		    margin-right: 40px;
+		    line-height: 2.1em;
+		    text-align: center;
+		    border: 2px solid #f0f0f0;
+		    border-radius: 50%; 
+		    color: #d8dad4;
+		    background: #fff;
+		    float: left;
+		    &.active:before{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url(../images/nav-check.png) no-repeat;
+				background-size: 100%;
+		    }
+		}
+	}
+}
+.labels-wrapper{
+	width: 100%;
+}
+.col-label{
+	position: absolute;
+	// background: #000;
+	img{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	&.col-label-eritrozuts{
+	    top: 51%;
+	    left: 84%;
+	    width: 13.5%;
+	}
+	&.col-label-leykozits{
+	    top: 71.5%;
+	    left: 77.6%;
+        width: 13.5%;
+	}
+	&.col-label-mozg{
+	    top: 42.5%;
+    	left: 13.3%;
+	    width: 11.2%;
+	}
+	&.col-label-plazma{
+	    top: 29.5%;
+    	left: 1.5%;
+    	width: 11.3%;
+	}
+	&.col-label-ribs{
+		top: 35%;
+		left: 76%;
+	    width: 11.3%;
+	}
+	&.col-label-svyazki{
+		top: 60%;
+		left: 18.5%;
+	    width: 11.3%;
+	}
+	&.col-label-trombozuts{	    
+		top: 23%;
+		left: 21.8%;
+	    width: 13.6%;
+	}
+	&.col-label-trilozits{
+	    top: 72%;
+	    left: 7.5%;
+        width: 13.7%;
+	}
+	&.col-label-zutoplazma{
+	    top: 52%;
+	    left: 0%;
+        width: 13.6%;
+	}
+}
+.block-bottles{
+	position: absolute;
+	top: 23%;
+    left: 33%;
+    width: 41%;
+    cursor: pointer;
+    &.bottle-error{
+    	.block-bottles-in{
+    		&::after{
+				background: url(../images/bottles/hover-error.png) no-repeat;
+    		}
+    	}
+    }
+    .block-bottles-in{
+    	position: relative;
+    	.speech-bubble{
+    		position: absolute;
+			right: -24%;
+			bottom: 93%;
+			z-index: 12;
+			display: inline-block;
+			min-width: 46%;
+    		padding: 20px;
+    		line-height: 1.3em; 
+    		text-align: center;
+    		font-family: @family_conquerorsansextrabold;
+    		color: #24ddd0;
+    		background: #f5f4ef;
+		    box-shadow: 0px 1px 14px 4px rgba(0,0,0, .1);
+		    &.speech-bubble-error{
+		    	color: #f48154;
+		    }
+    		&::before{
+				content: '';
+				position: absolute;
+				left: 0;
+			    bottom: -49px;
+				display: block;
+				width: 46px;
+				height: 51px;
+				background: url(../images/speech-bubble-before.png) no-repeat;			
+				background-size: 100%;
+			}	
+    		p{
+    			padding: 20px;
+    			background: #fff;    			   			
+    		}
+    	}
+    	img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}	
+		&::after{
+			content: '';
+
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			width: 0%;
+			height: 100%;
+			background: url(../images/bottles/bottle-hover.png) no-repeat;			
+			background-size: 100% !important;
+		}		
+    }
+    &:hover .block-bottles-in::after{
+    	width: 100%;
+    }
+    .btn{
+    position: absolute;
+    top: 40%;
+    left: 21%;
+    z-index: 20;
+    display: block;
+    // width: 253px;
+    width: 34%;
+    /* height: 73px; */
+    padding-bottom: 3px;
+    line-height: 2.2em;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: #4ecdc4;
+    	&:hover{
+    		opacity: .7;
+    	}
+    }
+		
+}
+/*
+.eritrozuts-0{
+	.block-bottles-in{
+		&::after{
+			width: 100%;
+			background: url(../images/bottles/eritrozuts/eritrozuts-0.png) no-repeat;	
+		}
+	}
+}
+.eritrozuts{
+	.block-bottles-in{
+		&::after{
+			width: 100%;
+			background: url(../images/bottles/eritrozuts/eritrozuts.png) no-repeat;	
+		}
+	}
+}
+.eritrozuts-leykozits-0{
+	.block-bottles-in{
+		&::after{
+			width: 100%;
+			background: url(../images/bottles/eritrozuts/eritrozuts-leykozits-0.png) no-repeat;	
+		}
+	}
+}
+.eritrozuts-leykozits{
+	.block-bottles-in{
+		&::after{
+			width: 100%;
+			background: url(../images/bottles/eritrozuts/eritrozuts-leykozits.png) no-repeat;	
+		}
+	}
+}
+*/
+
+
+
+.ui-widget.ui-widget-content{
+	border: 0;
+	font-size: 28px;
+	background: #ffe66c;
+	color: #777;
+	&::before{
+		content: '';
+		border: 10px solid transparent;
+		border-bottom: 15px solid #ffe66c;
+		display: block;
+		width: 0;
+		height: 0;
+		margin: -30px 2% 0 0;
+		float: right;
+	}
+}
+.ui-widget-shadow {
+    -webkit-box-shadow: 0px 0px 0px #aaaaaa;
+    box-shadow: 0px 0px 0 #aaaaaa;
+}
+/* ------------------------------  Stop contant ------------------------------ */ 

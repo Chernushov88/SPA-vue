@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+	<head> 
+		<meta charset="utf-8" />
+		<title>Приготовь кровь</title>
+		<meta name="description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=960">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+		<!-- <meta name="viewport" content="width=device-width" /> -->
+		<!-- <link rel="shortcut icon" href="favicon.ico" /> -->
+		<link rel="stylesheet" href="css/jquery-ui/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">  
+		<link rel="stylesheet" href="css/media.css">
+
+		<!-- script -->		
+		<!-- Vue 2.x -->
+		<script src="https://unpkg.com/vue"></script>		
+		<!-- Узнаем что за устройство -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>	
+		<!--<script src="js/jquery-ui/jquery-ui.js"></script>
+		<script src="js/device.js"></script>
+		<script>
+			$( document ).tooltip();
+		</script>-->
+		<!-- -->
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all" />
+			<script type="text/javascript" src="https://rawgit.com/codefucker/finalReject/master/reject/reject.min.js" data-text="Ваш браузер застарел, обновите свой браузер"></script>
+			<script src="js/html5shiv/es5-shim.min.js"></script>
+			<script src="js/html5shiv/html5shiv.min.js"></script>
+			<script src="js/html5shiv/html5shiv-printshiv.min.js"></script>
+			<script src="js/respond/respond.min.js"></script>
+		<![endif]-->		
+	</head>
+	<body class="" >
+		<script>
+		var mobile = device.desktop() ? false : true;
+		console.log(mobile)
+		</script>		
+		<main class="wrapper" >
+			<div class="wrapper-in" id="home-container" v-bind:class="type + '-hover'" >					
+				<section class="contant">
+					<ul class="nav">
+						<li class="active">1</li>
+						<li>2</li>
+					</ul>
+					<div class="refresh-wrapper">
+						<a href="#" class="refresh" title="" @click="refreshAll()" aria-describedby="ui-id-10"></a>
+						<div class="ui-widget-content"><div class="ui-tooltip-content">Начать сначала</div></div>
+					</div>
+					
+
+					<div class="h1">Приготовь кровь</div>
+					<div class="labels-wrapper">
+						<div class="col-label col-label-eritrozuts">
+							<span>эритроциты</span>
+							<img src="images/labels/eritrozuts.png" alt="">
+						</div>
+						<div class="col-label col-label-leykozits">
+							<span>лейкоциты</span>
+							<img src="images/labels/leykozits.png" alt="">
+						</div>
+						<div class="col-label col-label-mozg">
+							<span>костный <br>мозг</span>
+							<img src="images/labels/mozg.png" alt="">
+						</div>
+						<div class="col-label col-label-plazma">
+							<span>плазма</span>
+							<img src="images/labels/plazma.png" alt="">
+						</div>
+						<div class="col-label col-label-ribs">
+							<span>рыбки</span>
+							<img src="images/labels/ribs.png" alt="">
+						</div>
+						<div class="col-label col-label-svyazki">
+							<span>связки</span>
+							<img src="images/labels/svyazki.png" alt="">
+						</div>
+						<div class="col-label col-label-trilozits">
+							<span>трилоциты</span>
+							<img src="images/labels/trilozits.png" alt="">
+						</div>
+						<div class="col-label col-label-trombozuts">
+							<span>тромбоциты</span>
+							<img src="images/labels/trombozuts.png" alt="">
+						</div>
+						<div class="col-label col-label-zutoplazma">
+							<span>цитоплазма</span>
+							<img src="images/labels/zutoplazma.png" alt="">
+						</div>
+					</div>
+					<!-- <div class="block-bottles"> -->
+					<!-- <div class="block-bottles bottle-error"> -->
+					<div class="block-bottles eritrozuts-plazma-trombozuts-leykozits-0 bottle-error">
+						<div class="block-bottles-in">
+							<img src="images/bottles/1.png" alt="">
+							<!-- <img src="images/bottles/eritrozuts/eritrozuts-leykozits.png" alt="" style="position: absolute;top: 0;display: none;">
+							<img src="images/bottles/bottles-finish4.png" alt="" style="position: absolute;top: -75px;left: -98px;width: 532px;height: 486px;z-index: -1;"> -->
+							<div class="speech-bubble">
+							<!-- <div class="speech-bubble speech-bubble-error"> -->
+								<p>Кровь готова!</p>
+								<p style="display:none">Связки нужны <br>в суставах,	<br>а не в крови!</p>
+							</div>
+							<!-- <a href="#" class="btn">Продолжить</a> -->
+						</div>												
+					</div>
+				</section>
+			</div>		
+		</main>
+		<!-- основной фаил пока что 
+		
+		<script src="js/vue/component.js"></script>
+		<script src="js/vue/vue.js"></script>
+		-->
+		
+
+<!-- <div role="tooltip" id="ui-id-5" class="ui-tooltip ui-corner-all ui-widget-shadow ui-widget ui-widget-content" style="top: 98.6894px; left: 1128.34px; display: block;"><div class="ui-tooltip-content">Начать сначала</div></div> -->
+
+		
+	</body>
+</html>
+<!-- eritrozuts 
+
+leykozits
+
+plazma
+
+trombozuts -->
+
+
+
+
+
+
+
